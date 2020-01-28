@@ -32,29 +32,8 @@ export function ingreso() {
   const password2 = document.getElementById('passwordLogIn').value;
 
   firebase.auth().signInWithEmailAndPassword(email2, password2)
-  .then (() => {
-    firebase.auth().onAuthStateChanged((user) => {
-      if (user) {
-        console.log('existe usuario activo');
-        activeUser();
-  
-        // User is signed in.
-        const displayName = user.displayName;
-        const email = user.email;
-        const emailVerified = user.emailVerified;
-        const photoURL = user.photoURL;
-        const isAnonymous = user.isAnonymous;
-        const uid = user.uid;
-        const providerData = user.providerData;
-        // ...
-      } else {
-        // User is signed out.
-        console.log('no existe usuario activo');
-        // ...
-      }
-    }); email - password.html;
-  })
-  .catch ((error) => {
+  .then
+  .catch((error) => {
   // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
@@ -62,6 +41,29 @@ export function ingreso() {
     console.log(errorMessage);
   });
 }
+export function observador() {
+  firebase.auth().onAuthStateChanged((user) => {
+    if (user) {
+      console.log('existe usuario activo');
+      activeUser();
+
+      // User is signed in.
+      const displayName = user.displayName;
+      const email = user.email;
+      const emailVerified = user.emailVerified;
+      const photoURL = user.photoURL;
+      const isAnonymous = user.isAnonymous;
+      const uid = user.uid;
+      const providerData = user.providerData;
+      // ...
+    } else {
+      // User is signed out.
+      console.log('no existe usuario activo');
+      // ...
+    }
+  }); email - password.html;
+}
+observador();
 
 // funcionalidad de Cerrar Sesión
 export function cerrar() {
