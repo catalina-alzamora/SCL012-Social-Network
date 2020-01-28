@@ -12,49 +12,55 @@ export function registrar() {
   });
   email - password.html;
 }
-function activeUser() {
-  const contenido = document.getElementById('contenido');
-  contenido.innerHTML = `
-    <p> Bienvenido!</p>
-    <button onclick="cerrar()">Cerrar Sesión</button>
-    `;
-}
+
 // función de ingreso de sesión
 
 export function ingreso() {
   const email2 = document.getElementById('emailLogIn').value;
   const password2 = document.getElementById('passwordLogIn').value;
 
-  firebase.auth().signInWithEmailAndPassword(email2, password2).catch((error) => {
+  firebase.auth().signInWithEmailAndPassword(email2, password2)
+  .catch((error) => {
   // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
     console.log(errorCode);
     console.log(errorMessage);
+  })
+};
+
+export function googleSignIn(){
+  const baseProvider = new firebase.auth.GoogleAuthProvider();
+  firebase.auth().signInWithPopup(baseProvider)
+  .then((result) => {
+    console.log(result);
+    console.log('Success Google acount Linked');
+    window.location.hash = '#home';
+    root.innerHTML = '';
+    root.innerHTML = `<header class="homeLogo">
+    <h1><img src="img/logo-boceto.png" alt=""></h1>
+    <nav class="navBar">
+    <ul>
+    <li id="home"><a href="#home">Inicio</a></li>
+    <li id="myWorks"><a href="#myWorks">Mis Trabajos</a></li>
+    <li id="favorite"><a href="#favorite">Favoritos</a></li>
+    <li id="search"><a href="#search">Buscar</a></li>
+    <li id="logout"><a href="#logout">Cerrar sesión</a></li>
+    <main>
+    </ul>
+    </nav>
+    </header>
+    <main id="fullMain"> 
+    
+   
+    </main>
+    <button id="addPost" class="btnAdd"><a href="#addPost">°</a></button>`
+  }).catch((err) => {
+    console.log(err);
+    console.log('Failed to do');
+    alert("Error al ingresar")
   });
 }
-export function observador() {
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      console.log('existe usuario activo');
-      activeUser();
-      // User is signed in.
-      const displayName = user.displayName;
-      const email = user.email;
-      const emailVerified = user.emailVerified;
-      const photoURL = user.photoURL;
-      const isAnonymous = user.isAnonymous;
-      const uid = user.uid;
-      const providerData = user.providerData;
-      // ...
-    } else {
-      // User is signed out.
-      console.log('no existe usuario activo');
-      // ...
-    }
-  }); email - password.html;
-}
-observador();
 
 // funcionalidad de Cerrar Sesión
 export function cerrar() {
@@ -88,16 +94,7 @@ export function savePost() {
     });
 }
 
-export function googleSignIn() {
-  const baseProvider = new firebase.auth.GoogleAuthProvider();
-  firebase.auth().signInWithPopup(baseProvider).then((result) => {
-    console.log(result);
-    console.log('Success Google acount Linked');
-  }).catch((err) => {
-    console.log(err);
-    console.log('Failed to do');
-  });
-}
+
 let btnUploadImg = document.getElementById('uploadImage'); 
 let storageRef = firebase.storage().ref();
 let imagesFBRef = firebase.database().ref('ImagesFB');
@@ -200,3 +197,5 @@ db.collection('postconuid').onSnapshot((querySnapshot) => {
       console.error("Error adding document: ", error);
     });
  };
+
+

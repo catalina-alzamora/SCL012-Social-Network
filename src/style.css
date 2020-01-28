@@ -6,7 +6,7 @@
 body {
     background-color: rgb(40, 40, 40);
 }
-#root{
+#full{
     background-image: url("img/sketchbook.png");
     background-repeat: no-repeat;
     max-width: 900px;
