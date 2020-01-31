@@ -135,7 +135,12 @@ function confirmUpload () {
 })};
 // Creando nodo en firebase 
 function createNodeInFB(imgName, downloadURL){
-  imagesFBRef.push({nombre: imgName, url: downloadURL})
+  db.collection('postconuid').add({ 
+    email: firebase.auth().currentUser.email,
+    uid: firebase.auth().currentUser.uid,
+    img: downloadURL
+  })
+  
 }
 
 // Función para postear
