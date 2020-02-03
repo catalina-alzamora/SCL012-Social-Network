@@ -1,7 +1,7 @@
 // Este es el punto de entrada de tu aplicacion
 
 import {
-  emailLogin, googleSignIn, register, uploadImgAndText,
+  emailLogin, googleSignIn, register, uploadImgAndText, saveComment,
 } from './app.js';
 
 function initialHash() {
@@ -166,20 +166,27 @@ const showUpPost = () => {
       homeMain.innerHTML += `<div class="postDiv">
       <div class="postArea"> ${doc.data().post}</div>
       <div> <img class="images" src=${doc.data().img}></div>
-      <button class="btn">Comentarios</button>
+      <button id="btnComment" class="btnShowComment">Comentarios</button>
       </div>
       <div id="oldComents" class="commentDiv"></div>
       <div id="newComents" class="commentDiv"></div>`;
-      // función para mostrar caja de comentarios
-      /* function showComment() {
-       console.log('mostrar');
-      }
-       let coment = Array.from(document.querySelectorAll('.commentDiv')).forEach((element) => {
-       element.addEventListener('click', () => {
-       console.log(element);
-       divPost.innerHTML = '';
-       });
-       }); */
+      const idPost = doc.id;
+      const btnComments = Array.from(document.querySelectorAll('.btnShowComment'));
+      btnComments.forEach((element) => {
+        element.addEventListener('click', () => {
+          const newComment = document.getElementById('newComents');
+          newComment.innerHTML = `<textarea class="comment" id="textComment" cols="30" rows="10"></textarea>
+          <button id="upComment" class="btn">Comentar</button>`
+          const btnUpComment = document.getElementById('upComment');
+          btnUpComment.addEventListener('click', () => {
+            
+            const textComment = document.getElementById('textComment').value;
+            console.log(idPost);
+            console.log(textComment);
+            saveComment(idPost, textComment);
+          })
+        })
+      })
     });
   });
 };
