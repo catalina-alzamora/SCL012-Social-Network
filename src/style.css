@@ -32,18 +32,14 @@ body {
     display: flex;
     flex-direction: column;
 }
-h1 img{
-    padding-top: 20px;
-    width: 450px;
-}
+
 nav ul li img{
-    display: block;
     display: flex;
     max-width: 25px;
     height: auto;
   }
 .homeLogo img{
-    margin-top: 50px;
+    margin-top: 70px;
     padding-bottom: 10px;
     width: 350px;
     float: left;
@@ -75,6 +71,7 @@ nav li a{
     text-decoration: none;
         
 }
+
 main{
     width: 95%;
     margin: auto; 
@@ -153,6 +150,7 @@ main{
 .businessCard{
     width: 55%;
     margin: auto;
+    padding: 20px;
     border: solid 2px #4d1e03;
     background-color: antiquewhite;
     border-radius: 5px;
@@ -165,12 +163,16 @@ main{
     width: 150px;
     height: 150px;
 }
+
+#userPerfil{
+margin-top: 20px;
+}
+
 .idUser{
     padding-top: 50px;
     color: black;
 }
 .myPages{
-    display: block;
     margin: 3px;
 }
 .myPages p{
@@ -195,7 +197,7 @@ main{
     margin: auto;
 }
 .images{
-    max-width: 300px;
+    max-width: 70%;
     height: auto;
     border: solid black 2px;
 }
@@ -222,12 +224,7 @@ display: none;
 @media (max-width:700px) {
 
     /* Start Screen*/   
-    #root{
-        margin: auto;
-        border: 0;
-        background-size: cover;
-        padding: 0; 
-    }
+    
     h1 img{
         margin-top: 40px;
         margin-bottom: 0px;
@@ -235,18 +232,11 @@ display: none;
         max-width: 60%;
         float: center;
     }
-    .homeLogo img{
-        margin-top: 30px;
-        padding: 10px;
-        max-width: 40%;
-        float: left;
-    }
 
     .header{
         padding: 10px;
         margin: 5px 10px;
         display: flex;
-        justify-content: center;
         align-items: center;
         flex-direction: column;
     }  
@@ -290,26 +280,20 @@ display: none;
     .homeLogo img{
         margin-top: 70px;
         margin-left: 15px;
-        padding: 0px;
+        padding: 0;
         max-width: 50%;
         float: left;
     }
     .navBar{
-        margin:20px 10px;
-        width: 94%;
-        margin-left: 20px;
-        border: black solid;
-        }
+        margin:22px;
+        width: 97%;
+    }
     nav li{
         text-align: center;
-        padding: 10px;
         flex-grow: 1;
-        border: red solid;
-        
     }    
 
     nav ul li img{
-        display: block;
         display: flex;
         max-width: 20px;
         height: auto;
@@ -331,7 +315,7 @@ display: none;
     }
 
     .images{
-        max-width: 15em;
+        width: 70%;
         height: auto;
         border: solid black 2px;
         
