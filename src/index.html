@@ -8,16 +8,14 @@
   <title>Boceto</title>
 </head>
 <body>
-  <div id="full">
-<div id="rootHeader">
+<div id="root">
   <header id="initialHeader" class="header">
     <h1><img src="img/logo-boceto.png" alt=""></h1>
   </header>
-</div>
 <main id="fullMain">    
-  <div class="autentication">
+  <div id = "autentication" class="autentication">
     <input id="emailLogIn" class="inputText" type="text" placeholder="Ingresa tu Correo">
-    <input id="passwordLogIn"class="inputText" type="password" placeholder="Ingresa tu Contraseña">
+    <input id="passwordLogIn" class="inputText" type="password" placeholder="Ingresa tu Contraseña">
     <button id="login" class="btn">Ingresar</button>
   </div>
   <div class="singIn">
@@ -25,38 +23,15 @@
     <button id="idGoogle">Continuar con Google</button>
     <button id="register" class="btn">Registrate</button>
     <p>¿Olvidaste tu contraseña?</p> <a href="#">Recuperala</a>
-  </main>
-</div> 
+  </div> 
+</main>
 </div>
 <footer id="footer">
 </footer>
   
-  <div id="postingFunc">
-    <input type="text"  id="posteo" placeholder="Qué compartiras hoy?">
-    <button class="btn" id="saveButton" onclick="post()">Post</button>
-    <p id="tabla"></p>
-  </div>
+</div>
 
-  <h4>Registro de Usuarios</h4>
-  <input id="email" type="email" placeholder="ingrese su email">
-  <input id="password" type="password" placeholder="registre su contraseña">
-  <button onclick="registrar()">Enviar</button>
 
-  <h4>Ingreso de Usuarios</h4>
-  <input id="email2" type="email" placeholder="ingrese su email">
-  <input id="password2" type="password" placeholder="registre su contraseña">
-  <button onclick="ingreso()">Acceder</button>
-  
-  <input id="uploadImage" type="file" accept="image/x-png,image/gif,image/jpeg">
-  <button id="postimg">postear imagen</button>
-  <input id="texto" type="text"> <button id="postBtn" onclick="posting()">postear texto</button>
-<div id="forPosting"></div>
-<div id = "paraimg"></div>
-  <div id="contenido">
-  </div> 
-
-  <button onclick="googleSignIn()"> Google SignIn</button>
-  
  <!--Apartado Firebase-->
  
  <!-- The core Firebase JS SDK is always required and must be listed first -->
