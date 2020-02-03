@@ -1,5 +1,5 @@
 
-export const observer = () => {
+/* export const observer = () => {
   firebase.auth().onAuthStateChanged((user) => {
     if (user) {
       window.location.hash = '#home';
@@ -11,7 +11,7 @@ export const observer = () => {
       document.getElementById('autentication').appendChild(invalidUser);
     }
   }); email - password.html;
-};
+}; */
 
 // Log in
 export const emailLogin = (email, password) => {
@@ -56,15 +56,14 @@ export function register(emailR, passR) {
   firebase.auth().createUserWithEmailAndPassword(emailR, passR)
     .then(() => {
       // console.log('Usuario registrado exitosamente')
-    })
-    .catch((/* error */) => {
-    // Handle Errors here.
-      // const errorCode = error.code;
-      // const errorMessage = error.message;
-      // console.log(errorCode);
-      // console.log(errorMessage);
+      window.location.reload();
+    }).catch(() => {
+      const noRegister = document.createElement('p');
+      noRegister.setAttribute('class', 'errorAlert');
+      const textError = document.createTextNode('Error. Compruebe su correo y contraseña');
+      noRegister.appendChild(textError);
+      document.getElementById('errorDiv').appendChild(noRegister);
     });
-  email - password.html;
 }
 
 /* Cerrar Sesión
@@ -100,26 +99,6 @@ const db = firebase.firestore();
     document.getElementById('paraimg').innerHTML = result;
   });
 } */
-// Subiendo imagen a firebase storage
-export const uploadImgAndText = (valueImg, valueText) => {
-  const storageRef = firebase.storage().ref();
-  const uploadTask = storageRef.child(`Images/${valueImg.name}`).put(valueImg);
-  uploadTask.on('state_changed',
-    function (snapshot) {
-    }, function (error) {
-      const uploadFail = document.createElement('p');
-      uploadFail.setAttribute('class', 'errorAlert');
-      const textError = document.createTextNode('Error');
-      uploadFail.appendChild(textError);
-      document.getElementById('actionButtons').appendChild(uploadFail);
-      // Obteniendo URL de imagen
-    }, function () {
-      uploadTask.snapshot.ref.getDownloadURL()
-        .then(function(downloadURL) {
-          savePost (valueText, downloadURL)
-        })
-    })
-};
 
 export const savePost = (textValue, imgUrl) => {
   db.collection('Post').add({
@@ -127,6 +106,7 @@ export const savePost = (textValue, imgUrl) => {
     uid: firebase.auth().currentUser.uid,
     post: textValue,
     img: imgUrl,
+    postTime: new Date(),
   })
     .then((/* docRef */) => {
       // console.log('Document written with ID: ', docRef.id);
@@ -136,6 +116,29 @@ export const savePost = (textValue, imgUrl) => {
       // console.error('Error adding document: ', error);
     });
 };
+
+// Subiendo imagen a firebase storage
+export const uploadImgAndText = (valueImg, valueText) => {
+  const storageRef = firebase.storage().ref();
+  const uploadTask = storageRef.child(`Images/${valueImg.name}`).put(valueImg);
+  uploadTask.on('state_changed',
+    () => {
+    }, (error) => {
+      const uploadFail = document.createElement('p');
+      uploadFail.setAttribute('class', 'errorAlert');
+      const textError = document.createTextNode(`Error:${error}`);
+      uploadFail.appendChild(textError);
+      document.getElementById('actionButtons').appendChild(uploadFail);
+      // Obteniendo URL de imagen
+    }, () => {
+      uploadTask.snapshot.ref.getDownloadURL()
+        .then((downloadURL) => {
+          savePost(valueText, downloadURL);
+        });
+    });
+};
+
+
 // Creando nodo en firebase
 // // llamando al div donde se imprimirán los post
 // //const divPost = document.getElementById('forPosting');

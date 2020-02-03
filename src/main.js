@@ -15,7 +15,6 @@ const main = document.getElementById('fullMain');
 const btnLogIn = document.getElementById('login');
 const btnGoogle = document.getElementById('idGoogle');
 const btnRegister = document.getElementById('register');
-const sectionPerfil = document.getElementById('userPerfil');
 
 btnLogIn.addEventListener('click', () => {
   const userID = document.getElementById('emailLogIn').value;
@@ -32,6 +31,7 @@ btnRegister.addEventListener('click', () => {
 const registerView = () => {
   main.innerHTML = '';
   main.innerHTML = `<form class="registerUser">
+      <div id = "errorDiv"></div>
       <input id=" nombreyApellido"class="inputText" type="text" placeholder="Nombre y apellido">
       <input id="pseudonimo"class="inputText" type="text" placeholder="Pseudonimo">
       <input id="emailRegister" class="inputText" type="email" placeholder="Correo electronico">
@@ -111,6 +111,8 @@ const homeView = () => {
           </li>
        </ul>
       </nav>
+      <section id='userPerfil'>
+      </section>
     <main id="homeMain">     
     </main>
     <section id="newPostSection">
@@ -119,7 +121,8 @@ const homeView = () => {
 };
 
 const myWorkasView = () => {
-  const newPostSection = document.getElementById('newPostSection');
+  const sectionPerfil = document.getElementById('userPerfil');
+  let newPostSection = document.getElementById('newPostSection');
   newPostSection.innerHTML = '';
   sectionPerfil.innerHTML = `<div class="businessCard">
     <img src="img/photo-user-tester.png">
@@ -155,7 +158,8 @@ const sectionAddPost = () => {
 const db = firebase.firestore();
 const showUpPost = () => {
   const homeMain = document.getElementById('homeMain');
-  db.collection('Post').onSnapshot((querySnapshot) => {
+  const postInOrder = db.collection('Post').orderBy('postTime', 'desc');
+  postInOrder.onSnapshot((querySnapshot) => {
     homeMain.innerHTML = '';
     querySnapshot.forEach((doc) => {
       // console.log(doc.data());
