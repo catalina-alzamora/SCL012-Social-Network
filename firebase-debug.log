@@ -1,0 +1,112 @@
+[debug] [2020-01-31T17:26:02.030Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T17:26:02.037Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\camir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-31T17:26:02.037Z] CLI Version:   7.12.1
+[debug] [2020-01-31T17:26:02.037Z] Platform:      win32
+[debug] [2020-01-31T17:26:02.038Z] Node Version:  v12.11.1
+[debug] [2020-01-31T17:26:02.042Z] Time:          Fri Jan 31 2020 14:26:02 GMT-0300 (Chile Summer Time)
+[debug] [2020-01-31T17:26:02.042Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T17:26:02.043Z] 
+[debug] [2020-01-31T17:26:02.092Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-31T17:26:02.095Z] > authorizing via signed-in user
+[debug] [2020-01-31T17:26:02.095Z] [iam] checking project boceto-616d7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-31T17:26:02.100Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-31T17:26:02.101Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-31T17:26:02.221Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T17:26:02.242Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boceto-616d7:testIamPermissions  
+
+[debug] [2020-01-31T17:26:03.473Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T17:26:03.476Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7  
+ 
+[debug] [2020-01-31T17:26:04.702Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\camir\OneDrive\Desktop\Social\SCL012-Social-Network'...
+[info] 
+[debug] [2020-01-31T17:26:04.708Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7/webApps/-/config  
+ 
+[debug] [2020-01-31T17:26:06.110Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: src
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2020-01-31T19:11:16.641Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T19:11:16.644Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\camir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-31T19:11:16.644Z] CLI Version:   7.12.1
+[debug] [2020-01-31T19:11:16.644Z] Platform:      win32
+[debug] [2020-01-31T19:11:16.644Z] Node Version:  v12.11.1
+[debug] [2020-01-31T19:11:16.650Z] Time:          Fri Jan 31 2020 16:11:16 GMT-0300 (Chile Summer Time)
+[debug] [2020-01-31T19:11:16.650Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T19:11:16.650Z] 
+[debug] [2020-01-31T19:11:16.662Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-31T19:11:16.664Z] > authorizing via signed-in user
+[debug] [2020-01-31T19:11:16.664Z] [iam] checking project boceto-616d7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-31T19:11:16.666Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-31T19:11:16.666Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-31T19:11:16.829Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T19:11:16.853Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boceto-616d7:testIamPermissions  
+
+[debug] [2020-01-31T19:11:17.924Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T19:11:17.928Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7  
+ 
+[debug] [2020-01-31T19:11:18.334Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\camir\OneDrive\Desktop\Social\SCL012-Social-Network'...
+[info] 
+[debug] [2020-01-31T19:11:18.341Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7/webApps/-/config  
+ 
+[debug] [2020-01-31T19:11:19.767Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: src
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2020-01-31T19:17:11.130Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T19:17:11.132Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\camir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-31T19:17:11.132Z] CLI Version:   7.12.1
+[debug] [2020-01-31T19:17:11.132Z] Platform:      win32
+[debug] [2020-01-31T19:17:11.132Z] Node Version:  v12.11.1
+[debug] [2020-01-31T19:17:11.133Z] Time:          Fri Jan 31 2020 16:17:11 GMT-0300 (Chile Summer Time)
+[debug] [2020-01-31T19:17:11.133Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T19:17:11.133Z] 
+[debug] [2020-01-31T19:17:11.146Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-31T19:17:11.148Z] > authorizing via signed-in user
+[debug] [2020-01-31T19:17:11.148Z] [iam] checking project boceto-616d7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-31T19:17:11.151Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boceto-616d7:testIamPermissions  
+
+[debug] [2020-01-31T19:17:12.243Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T19:17:12.249Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7  
+ 
+[debug] [2020-01-31T19:17:13.564Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\camir\OneDrive\Desktop\Social\SCL012-Social-Network'...
+[info] 
+[debug] [2020-01-31T19:17:13.571Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7/webApps/-/config  
+ 
+[debug] [2020-01-31T19:17:14.076Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: src
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2020-01-31T21:05:46.969Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T21:05:46.973Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\camir\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-31T21:05:46.973Z] CLI Version:   7.12.1
+[debug] [2020-01-31T21:05:46.973Z] Platform:      win32
+[debug] [2020-01-31T21:05:46.974Z] Node Version:  v12.11.1
+[debug] [2020-01-31T21:05:46.976Z] Time:          Fri Jan 31 2020 18:05:46 GMT-0300 (Chile Summer Time)
+[debug] [2020-01-31T21:05:46.976Z] ----------------------------------------------------------------------
+[debug] [2020-01-31T21:05:46.976Z] 
+[debug] [2020-01-31T21:05:46.994Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-31T21:05:46.996Z] > authorizing via signed-in user
+[debug] [2020-01-31T21:05:46.996Z] [iam] checking project boceto-616d7 for permissions ["firebase.projects.get"]
+[debug] [2020-01-31T21:05:46.999Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-01-31T21:05:47.000Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-01-31T21:05:47.244Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T21:05:47.265Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/boceto-616d7:testIamPermissions  
+
+[debug] [2020-01-31T21:05:49.484Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-31T21:05:49.487Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7  
+ 
+[debug] [2020-01-31T21:05:50.406Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\camir\OneDrive\Desktop\Social\SCL012-Social-Network'...
+[info] 
+[debug] [2020-01-31T21:05:50.413Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/boceto-616d7/webApps/-/config  
+ 
+[debug] [2020-01-31T21:05:51.845Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: src
+[info] +  hosting: Local server: http://localhost:5000

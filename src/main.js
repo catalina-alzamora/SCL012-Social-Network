@@ -161,7 +161,8 @@ const showUpPost = () => {
   const postInOrder = db.collection('Post').orderBy('postTime', 'desc');
   postInOrder.onSnapshot((querySnapshot) => {
     homeMain.innerHTML = '';
-    querySnapshot.forEach((doc) => {
+    const postInOrder = db.collection('Post').orderBy('postTime', 'desc');
+    postInOrder.onSnapshot((querySnapshot) => {
       // console.log(doc.data());
       homeMain.innerHTML += `<div class="postDiv">
       <div class="postArea"> ${doc.data().post}</div>
