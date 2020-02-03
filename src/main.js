@@ -122,7 +122,7 @@ const homeView = () => {
 
 const myWorkasView = () => {
   const sectionPerfil = document.getElementById('userPerfil');
-  let newPostSection = document.getElementById('newPostSection');
+  const newPostSection = document.getElementById('newPostSection');
   newPostSection.innerHTML = '';
   sectionPerfil.innerHTML = `<div class="businessCard">
     <img src="img/photo-user-tester.png">
@@ -161,8 +161,7 @@ const showUpPost = () => {
   const postInOrder = db.collection('Post').orderBy('postTime', 'desc');
   postInOrder.onSnapshot((querySnapshot) => {
     homeMain.innerHTML = '';
-    const postInOrder = db.collection('Post').orderBy('postTime', 'desc');
-    postInOrder.onSnapshot((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
       // console.log(doc.data());
       homeMain.innerHTML += `<div class="postDiv">
       <div class="postArea"> ${doc.data().post}</div>
