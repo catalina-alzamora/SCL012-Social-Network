@@ -1,43 +1,24 @@
 
 # Boceto ...crea, comparte y colabora
 
-
-esquema para read me:
--icono de boceto
--link de deploy
--preambulo: hablar de la problematica 
--objetivos aplicación
--usuarios objetivo
--encuesta
--historia de usuario
--prototipo
--test de usabilidad
--decisiones de estilo de aplicación: paleta de colores y tipografía
--proyecciones?
--herramientas de desarrollo (js, css, etc)
--planificación: trello
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Entrega](#7-entrega)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
+* [1. Definición del Producto](#1-Definición-del-producto)
+* [2. Objetivos](#2-¿Cuáles-son-los-objetivos-de-estos-usuarios(as)-en-relación-con-el-producto?)
+* [3. Necesidades del usuario](#3-¿Cuáles-son-los-datos-más-relevantes-que-quieren-ver-en-la-interfaz-y-por-qué?)
+* [4. Historias de usuario](#4-Historias-de-usuario)
+* [5. Diseño de la interfaz de usuario](#5-diseño-de-la-interfaz-de-usuario)
+* [6. Prototipos](#6-Prototipos)
+* [7. Test de usabilidad](#7-Test-de-usabilidad)
+* [8. Herramientas](#8-Herramientas-utilizadas)
+* [9. Planificación](#9-planificación-del-proyecto)
 
 ***
 
 ## 1. Definición del Producto 📝
 
-Boceto nace de la necesidad de crear una red social que posibilite la comunicación, colaboración y compartir de ideas y proyectos por parte de aficionados e interesados así como por profesionales del área de la ilustración y animación digital. 
-<<<<<<< HEAD
-Lo cual se sustenta a partir de la [encuesta](https://docs.google.com/forms/d/1LuH0ZqQb1Tvlx9MY_JcZWW0Gi54LPixvdm5keL2yaYo/edit#responses) realizada a través de Google Forms, en donde de un total de 48 personas, el 95% de ellas comenta que utilizarían una red social refiriendo al área. 
-=======
-Lo cual se sustenta a partir de la [encuesta](https://docs.google.com/forms/d/1LuH0ZqQb1Tvlx9MY_JcZWW0Gi54LPixvdm5keL2yaYo/edit#responses) realizada a través de Google Forms, que del universo de 48 personas que nuestra encuesta, el 95% de ellas comenta que utilizarían una red social refiriendo al área. 
->>>>>>> 5fa32b39addbb85b8df65a97efe1db67f6b1ae81
-
+Desde hace unos años, con el mayor acceso a la tecnología, se ha dado un aumento en la práctica de la ilustración y la animación digital a nivel nacional, este auge se vio coronado con el premio oscar recibido por la productora [Punkrobot](http://punkrobot.cl/) el año 2015 por su cortometraje *La Historia de un Oso*. El galardón, trajo consigo un aumento en la oferta académica y laboral para ilustradores y animadores digitales, lo cual ha abierto espacios a más personas para aprender del área. Sin embargo, al buscar dentro del ambiente local no fue posible encontrar un espacio definido en el cual los artistas puedan hacer comunidad, donde compartir sus trabajos, colaborar con otros artistas o bien crear nuevas instancias de aprendizaje y reunión. Frente a esta necesidad nace Boceto, una red social que reune a los ilustradores y animadores digitales chilenos, permitiendoles crear redes de contacto, compartir tips sobre insumos, recibir feedback de artistas más experimentados, etc. 
+A fin de entender las necesidades de nuestro usuarios, realizamos una [encuesta](https://docs.google.com/forms/d/1LuH0ZqQb1Tvlx9MY_JcZWW0Gi54LPixvdm5keL2yaYo/edit#responses) a través de Google Forms, en donde el 95% de los artistas encuestados dice que si utilizaría una red social específica para ellos y algunos comentarios sacan a relucir que actualmente no cuentan con un espacio dedicado a ellos, su trabajo y el rubro. 
 
 ## 2. ¿Cuáles son los objetivos de estos usuarios(as) en relación con el producto? 🎯
 
@@ -47,113 +28,65 @@ Boceto, responde a la necesidad de la comunidad de ilustradores(as) de compartir
 
 ## 3. ¿Cuáles son los datos más relevantes que quieren ver en la interfaz y por qué?
 
-<<<<<<< HEAD
 A partir de la encuesta realizada, rescatamos algunos comentarios que reflejan lo que la gente espera encontrar en esta red social: 
-=======
-A partir de la encuesta realizada, cabe reconocer que las(os) usuarias(os) esperan encontrar en una red social: 
->>>>>>> 5fa32b39addbb85b8df65a97efe1db67f6b1ae81
 
->   "Es una muy buena iniciativa, temas como el uso de la animación en otras areas es algo que no he visto mucho, como en ciencias por ejemplo."
+>   "Es una muy buena iniciativa, temas como el uso de la animación en otras áreas es algo que no he visto mucho, como en ciencias por ejemplo."
 
 > "Que el enfoque fuese profesional, no en términos de segregación, sino que aun siendo red social, no de espacio a malas intenciones (trolls, mensajes de odio y otros). Tristemente es lo que sucede cuando no hay administración adecuada de redes, y muchas veces terminan por automatizar dicha administración con bots, lo que pasa a ser un desastre" 
 
-> "Estamos muy solos en todo sentido. No nos conocemos entre nosotros, ni el resto. Por esto no sabemos cotizar nuestro trabajo ni como vivir de él. (...)osotros como ilustradores tampoco sabemos sacarle partido a lo que hacemos, qué vende más, por qué, que significa tener un estilo propio, en qué nivel de ilustrador/animador estoy, estoy haciendo algo único o más del montón, podría sacar mejor provecho de mi trabajo si colaboro con otros artistas, etc"
+> "Estamos muy solos en todo sentido. No nos conocemos entre nosotros, ni el resto. Por esto no sabemos cotizar nuestro trabajo ni como vivir de él. (...)nosotros como ilustradores tampoco sabemos sacarle partido a lo que hacemos, qué vende más, por qué, que significa tener un estilo propio, en qué nivel de ilustrador/animador estoy, estoy haciendo algo único o más del montón, podría sacar mejor provecho de mi trabajo si colaboro con otros artistas, etc"
 
 
 ## 4. Historias de usuario
 
+Con los datos obtenidos de la encuesta, y los comentarios que nos han dejado, creamos nuestra primera historia de usuario:
+
 HU1: "Yo como ilustrador/animador(a) quiero publicar mi trabajo (dibujo) para recibir feedback"
-<<<<<<< HEAD
 
 HU2: "Yo como ilustrador/animador(a) quiero poder conocer de datos que otros*
 
-De las que se asumiran como terminadas una vez que cumplan los siguientes  **Criterios de Aceptación:**
 
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
-  - Testearon manualmente buscando errores e imperfecciones simples.
-  - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
-    usuarios como mejoras.
-  - Desplegaron su aplicación y etiquetaron la versión (git tag).
+## 5. Diseño de la Interfaz de Usuario 🎨
 
-## 5. Diseño de la Interfaz de Usuario 
+Respecto al diseño, como equipo tratamos de acercanos al ambiente que en común mantienen tanto ilustradores como animadores digitales, apelando que "toda idea  parte de un boceto", nos propusimos, crear una interfaz para rememorar la clásica libreta de dibujo (croquera) en la cual los artistas dan sus primeros trazos antes de llegar a las versiones finales  en formato digital. Este elemento del fondo se complementa con la elección de colores de gama café y anaranjado que complementa el tono claro del fondo y la gama de colores sepia del logo:
 
-(prototipo de baja fidelidad)
-![img Prototipo]("img/b1 (2).jpeg")
+Paleta de colores: 
+#FFC32F, #DEAE3E
+El color naranja evoca energía, diversión y sociabilidad
+El color café produce armonía, además se le conoce como el color de los artistas, por el tono de las tintas antiguas.
 
-## 6. Diseño de la Interfaz de Usuario 🎨
+ Los detalles de botones, logotipo e íconos emulan el trazo "a lápiz" para dar una versión lúdica con un toque "retro" de los elementos, además de crear una identidad gráfica dentro de la interfaz reconocible para el usuario.  
 
-Respecto al diseño, como equipo tratamos de acercanos al ambiente que en común mantienen tanto Ilustradores como Animadores Digitales, apelando que "toda idea  parte de un boceto", por lo cual adoptamos como fondo de nuestra app una libreta. A partir de la cual, se van tomando las desiciones de diseño y estilos, tal como los colores que asociamos y tipografías. 
+Dentro de la diagramación se optó por un espacio limpio que permitiera dar protagonismo al trabajo de los usuarios y el contenido a compratir, dejando un menú de navegación básico y un espacio para el perfil del usuario que a la vez agrupe sus trabajos y los portafolios digitales externos en caso de tenerlos.
 
-
-## Prototipos 
+## 6. Prototipos 
 
 [Prototipos de Baja Fidelidad] 
-
-
+![img Prototipo]("./src/img/ingreso.jpg")
 
 [Prototipo de Alta Fidelidad para app móvil](https://www.figma.com/file/pFeY0gdNy8pe4n8ntTPW7M/Boceto-app?node-id=0%3A1)
 
 [Prototipo de Alta Fidelidad para escritorio](https://www.figma.com/file/K0EXfq6Ldq3x5qK7Q9CVLy/Boceto-web?node-id=0%3A1)
 
-## Test de usabilidad
+## 7. Test de usabilidad
 [Test de usabilidad 1](https://www.figma.com/file/K0EXfq6Ldq3x5qK7Q9CVLy/Boceto-web?node-id=0%3A1)
 
 [Test de usabilidad 2](https://www.loom.com/share/3e0b4170a656471c98312044b4c8b1e8)
-=======
 
-HU2: "Yo como ilustrador/animador(a) quiero poder conocer de datos que otros*
-
-De las que se asumiran como terminadas una vez que cumplan los siguientes  **Criterios de Aceptación:**
-
-  - Debe ser una SPA.
-  - Debe ser _responsive_.
-  - Deben haber recibido _code review_ de al menos una compañera de otro equipo.
-  - Hicieron los _test_ unitarios
-  - Testearon manualmente buscando errores e imperfecciones simples.
-  - Hicieron _pruebas_ de usabilidad e incorporaron el _feedback_ de los
-    usuarios como mejoras.
-  - Desplegaron su aplicación y etiquetaron la versión (git tag).
-
-## 5. Diseño de la Interfaz de Usuario 
-
-(prototipo de baja fidelidad)
-![img Prototipo]("img/b1 (2).jpeg")
-
-## 6. Diseño de la Interfaz de Usuario 🎨
-
-Respecto al diseño, como equipo tratamos de acercanos al ambiente que en común mantienen tanto Ilustradores como Animadores Digitales, apelando que "toda idea  parte de un boceto", por lo cual adoptamos como fondo de nuestra app una libreta. A partir de la cual, se van tomando las desiciones de diseño y estilos, tal como los colores que asociamos y tipografías. 
+### Iteraciones
+Tras los test de usabilidad con el prototipo de alta fidelidad, detectamos que uno de los íconos puestos en el menú de navegación no era entendible por los usuarios. Así es como se realizó la primera iteración del producto, donde cambiamos el ícono por uno más intuitivo.
+Con respecto a la funcionalidad, los usuarios lograron rapidamente la tarea que se les dió, que correspondía a subir una imagen al muro de la aplicación.
 
 
-## Prototipos 
-
-[Prototipos de Baja Fidelidad] 
-
-
-
-[Prototipo de Alta Fidelidad](https://www.figma.com/file/pFeY0gdNy8pe4n8ntTPW7M/Boceto-app?node-id=0%3A1)
->>>>>>> 5fa32b39addbb85b8df65a97efe1db67f6b1ae81
-
-
-
-
-### 5.6 Consideraciones del comportamiento de la interfaz de usuario (UI)
-
-Estas consideraciones te ayudarán a escribir las Definiciones de Terminado de
-tus H.U.:
-
-
-
-
-## 5.7. Herramientas Utilizadas 🛠
+## 8. Herramientas Utilizadas 🛠
 * JavaScript(ES6)
 * HTML5
 * CSS3
 * Firebase
 * Git Github
+* Figma
 
-## 8. Planificación del proyecto ⏱
+
+## 9. Planificación del proyecto ⏱
 
 La planificación fué realizada con  [Trello](https://trello.com/b/UNUWeMnj/red-social-fe1).
